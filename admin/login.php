@@ -42,10 +42,8 @@ require_once __DIR__ . '/common/header.php';
 
 <div class="px-4 py-8 space-y-6">
     <div class="text-center space-y-2">
-        <div class="w-16 h-16 bg-amber-500/10 border border-amber-500/30 rounded-3xl flex items-center justify-center mx-auto text-amber-400 text-2xl shadow-xl shadow-amber-500/10">
-            <i class="fa-solid fa-shield-halved"></i>
-        </div>
-        <h1 class="text-2xl font-bold tracking-tight text-slate-100">Adept Admin Login</h1>
+        <img src="../assets/logo.jpg" alt="i Free Fire Logo" class="w-16 h-16 rounded-3xl object-cover ring-2 ring-amber-500 shadow-xl shadow-amber-500/20 mx-auto" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=200&q=80'">
+        <h1 class="text-2xl font-bold tracking-tight text-slate-100">i Free Fire Admin Login</h1>
         <p class="text-xs text-slate-400">Restricted Administration Panel Access</p>
     </div>
 
@@ -60,7 +58,7 @@ require_once __DIR__ . '/common/header.php';
         <form method="POST" action="login.php" class="space-y-4">
             <div>
                 <label class="block text-xs font-bold text-slate-300 mb-1">Admin Email</label>
-                <input type="email" name="email" required placeholder="admin@adeptplay.com" value="admin@adeptplay.com"
+                <input type="email" name="email" required placeholder="admin@ifreefire.com" value="admin@ifreefire.com"
                     class="w-full bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl py-3 px-3 text-xs text-slate-100 focus:outline-none">
             </div>
 
@@ -76,7 +74,7 @@ require_once __DIR__ . '/common/header.php';
         </form>
 
         <div class="p-3 bg-slate-950 rounded-2xl border border-slate-800 text-[11px] text-slate-400 text-center">
-            Default Credentials: <span class="text-amber-400 font-mono font-bold">admin@adeptplay.com</span> / <span class="text-amber-400 font-mono font-bold">admin123</span>
+            Default Credentials: <span class="text-amber-400 font-mono font-bold">admin@ifreefire.com</span> / <span class="text-amber-400 font-mono font-bold">admin123</span>
         </div>
     </div>
 </div>

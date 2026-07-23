@@ -1,6 +1,6 @@
 <?php
 /**
- * Adept Play - Central Configuration & Database Connection
+ * i Free Fire - Central Configuration & Database Connection
  * Host: 127.0.0.1, User: root, Pass: root
  */
 
@@ -11,7 +11,7 @@ if (session_status() === PHP_SESSION_NONE) {
 define('DB_HOST', '127.0.0.1');
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
-define('DB_NAME', 'adept_play');
+define('DB_NAME', 'ifreefire');
 
 $pdo = null;
 
@@ -23,7 +23,7 @@ try {
     ]);
 } catch (PDOException $e) {
     // Seamless fallback to SQLite PDO so app runs effortlessly out-of-the-box
-    $dbPath = __DIR__ . '/../adept_play.db';
+    $dbPath = __DIR__ . '/../ifreefire.db';
     try {
         $pdo = new PDO("sqlite:" . $dbPath, null, null, [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -107,29 +107,29 @@ function auto_init_db($pdo) {
         if ($stmt->fetchColumn() == 0) {
             $adminPass = password_hash('admin123', PASSWORD_DEFAULT);
             $pdo->exec("INSERT INTO users (name, email, phone, password, game_id, wallet_balance, is_admin) 
-                        VALUES ('Adept Admin', 'admin@adeptplay.com', '9999999999', '$adminPass', 'ADMIN_PRO', 1000.00, 1)");
+                        VALUES ('iFreeFire Admin', 'admin@ifreefire.com', '9999999999', '$adminPass', 'ADMIN_PRO', 1000.00, 1)");
         }
 
         // Seed default user if missing
-        $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE email = 'player@adeptplay.com'");
+        $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE email = 'player@ifreefire.com'");
         $stmt->execute();
         if ($stmt->fetchColumn() == 0) {
             $userPass = password_hash('player123', PASSWORD_DEFAULT);
             $pdo->exec("INSERT INTO users (name, email, phone, password, game_id, wallet_balance, is_admin) 
-                        VALUES ('Alex Gaming', 'player@adeptplay.com', '9876543210', '$userPass', 'ALEX_GMR99', 150.00, 0)");
+                        VALUES ('FF Pro Gamer', 'player@ifreefire.com', '9876543210', '$userPass', 'FF_PRO_99', 150.00, 0)");
         }
 
         // Seed default settings
         $defaultSettings = [
-            'app_name' => 'Adept Play',
+            'app_name' => 'i Free Fire',
             'support_phone' => '+91 98765 43210',
-            'support_email' => 'support@adeptplay.com',
+            'support_email' => 'support@ifreefire.com',
             'min_deposit' => '10',
             'min_withdrawal' => '50',
-            'upi_id' => 'adeptplay@upi',
+            'upi_id' => 'ifreefire@upi',
             'qr_code_url' => 'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=400&q=80',
             'payment_instructions' => 'Pay via UPI or scan QR code. Submit your 12-digit UTR transaction reference number after payment.',
-            'notice_text' => '⚡ Join BGMI, Free Fire & COD Tournaments Daily! Instant Wallet Payouts!'
+            'notice_text' => '🔥 Join Free Fire Max Tournaments Daily & Win Real Cash Rewards!'
         ];
         foreach ($defaultSettings as $k => $v) {
             $stmt = $pdo->prepare("INSERT OR IGNORE INTO settings (setting_key, setting_value) VALUES (?, ?)");
@@ -141,10 +141,10 @@ function auto_init_db($pdo) {
         $stmt->execute();
         if ($stmt->fetchColumn() == 0) {
             $tournaments = [
-                ['BGMI Erangel Mega Championship', 'BGMI', 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80', 20, 1000, 15, 100, 'Today 8:00 PM', 'Erangel', 'Solo', '', '', 'upcoming'],
-                ['Free Fire Max Bermuda Rush', 'Free Fire', 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80', 15, 600, 10, 48, 'Today 9:30 PM', 'Bermuda', 'Squad', '', '', 'upcoming'],
-                ['Call of Duty Crash Deathmatch', 'Call of Duty', 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80', 10, 300, 5, 50, 'Tomorrow 6:00 PM', 'Crash', 'Solo', '', '', 'upcoming'],
-                ['Ludo King 1v1 High Stakes', 'Ludo', 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=600&q=80', 30, 100, 0, 2, 'LIVE NOW', 'Classic 1v1', 'Solo', 'LUDO-9901', '5544', 'live']
+                ['Free Fire Max Bermuda Solo Rush', 'Free Fire', 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80', 20, 1000, 15, 48, 'Today 8:00 PM', 'Bermuda', 'Solo', '', '', 'upcoming'],
+                ['Free Fire Clash Squad 4v4 Championship', 'Free Fire', 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80', 50, 800, 0, 8, 'Today 9:30 PM', 'Bermuda CS', 'Squad', '', '', 'upcoming'],
+                ['Free Fire Purgatory Duo Survival', 'Free Fire', 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80', 15, 500, 10, 48, 'Tomorrow 6:00 PM', 'Purgatory', 'Duo', '', '', 'upcoming'],
+                ['Free Fire Kalahari Squad Showdown', 'Free Fire', 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80', 30, 1200, 20, 48, 'LIVE NOW', 'Kalahari', 'Squad', 'FF-ROOM-8820', '4411', 'live']
             ];
             $tStmt = $pdo->prepare("INSERT INTO tournaments (title, category, banner_url, entry_fee, prize_pool, per_kill_bonus, max_players, match_time, map_name, game_mode, room_id, room_password, status) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
             foreach ($tournaments as $t) {

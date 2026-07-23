@@ -52,7 +52,7 @@ $totalKills = $statData[0] ?: 0;
 $totalPrizeWon = $statData[1] ?: 0.00;
 
 $supportPhone = get_setting('support_phone', '+91 98765 43210');
-$supportEmail = get_setting('support_email', 'support@adeptplay.com');
+$supportEmail = get_setting('support_email', 'support@ifreefire.com');
 
 require_once __DIR__ . '/common/header.php';
 ?>

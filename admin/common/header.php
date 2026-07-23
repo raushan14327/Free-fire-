@@ -8,7 +8,7 @@ if ($currentPage !== 'login.php' && !is_admin_logged_in()) {
     redirect('login.php');
 }
 
-$appName = get_setting('app_name', 'Adept Play');
+$appName = get_setting('app_name', 'i Free Fire');
 ?>
 <!DOCTYPE html>
 <html lang="en" class="dark">
@@ -48,13 +48,11 @@ $appName = get_setting('app_name', 'Adept Play');
     
     <!-- Admin Top Header -->
     <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-amber-500/30 px-4 py-3 flex items-center justify-between">
-        <a href="index.php" class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-extrabold text-sm shadow-md shadow-amber-500/20">
-                <i class="fa-solid fa-shield-halved"></i>
-            </div>
+        <a href="index.php" class="flex items-center gap-2.5">
+            <img src="../assets/logo.jpg" alt="i Free Fire Logo" class="w-8 h-8 rounded-xl object-cover ring-2 ring-amber-500/50 shadow-md shadow-amber-500/20" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=100&q=80'">
             <div>
                 <span class="font-display text-2xl font-bold uppercase tracking-wider text-amber-400">
-                    Adept Admin
+                    i Free Fire Admin
                 </span>
             </div>
         </a>

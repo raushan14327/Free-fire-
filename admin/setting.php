@@ -4,7 +4,7 @@ require_once __DIR__ . '/admin/common/header.php';
 // Handle Save Settings Action
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'save_settings') {
     $settingsToUpdate = [
-        'app_name' => sanitize_input($_POST['app_name'] ?? 'Adept Play'),
+        'app_name' => sanitize_input($_POST['app_name'] ?? 'i Free Fire'),
         'support_phone' => sanitize_input($_POST['support_phone'] ?? ''),
         'support_email' => sanitize_input($_POST['support_email'] ?? ''),
         'min_deposit' => (float)($_POST['min_deposit'] ?? 10),
@@ -24,15 +24,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     redirect('setting.php');
 }
 
-$appName = get_setting('app_name', 'Adept Play');
+$appName = get_setting('app_name', 'i Free Fire');
 $supportPhone = get_setting('support_phone', '+91 98765 43210');
-$supportEmail = get_setting('support_email', 'support@adeptplay.com');
+$supportEmail = get_setting('support_email', 'support@ifreefire.com');
 $minDeposit = get_setting('min_deposit', '10');
 $minWithdrawal = get_setting('min_withdrawal', '50');
-$upiId = get_setting('upi_id', 'adeptplay@upi');
+$upiId = get_setting('upi_id', 'ifreefire@upi');
 $qrCodeUrl = get_setting('qr_code_url', 'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=400&q=80');
 $paymentInstructions = get_setting('payment_instructions', 'Pay via UPI or scan QR code. Submit 12-digit UTR reference ID.');
-$noticeText = get_setting('notice_text', '⚡ Join BGMI, Free Fire & COD Tournaments Daily! Instant Wallet Payouts!');
+$noticeText = get_setting('notice_text', '🔥 Join Free Fire Max Tournaments Daily & Win Real Cash Rewards!');
 ?>
 
 <div class="px-4 py-4 space-y-5">

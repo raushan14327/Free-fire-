@@ -9,7 +9,7 @@ if (!is_logged_in()) {
 $currentUser = get_logged_in_user();
 $minDeposit = (float)get_setting('min_deposit', '10');
 $minWithdrawal = (float)get_setting('min_withdrawal', '50');
-$upiId = get_setting('upi_id', 'adeptplay@upi');
+$upiId = get_setting('upi_id', 'ifreefire@upi');
 $qrCodeUrl = get_setting('qr_code_url', 'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=400&q=80');
 $paymentInstructions = get_setting('payment_instructions', 'Scan QR or pay to UPI ID. Submit 12-digit UTR number.');
 

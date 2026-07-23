@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
     private WebView webView;
     private SwipeRefreshLayout swipeRefreshLayout;
 
-    // Change this URL to your deployed website URL
-    private static final String APP_URL = "https://adeptplay.com/";
+    // Deployed website URL for i Free Fire applet
+    private static final String APP_URL = "https://ais-pre-jfljqhye52au32svq4milu-413673332901.asia-southeast1.run.app/";
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override

@@ -81,11 +81,9 @@ require_once __DIR__ . '/common/header.php';
 <div class="px-4 py-6 space-y-6">
     <!-- Brand Banner Header -->
     <div class="text-center space-y-2">
-        <div class="w-16 h-16 bg-gradient-to-tr from-cyan-500 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto shadow-xl shadow-cyan-500/20">
-            <i class="fa-solid fa-trophy text-slate-950 text-2xl"></i>
-        </div>
-        <h1 class="text-2xl font-bold tracking-tight text-slate-100">Welcome to Adept Play</h1>
-        <p class="text-xs text-slate-400">Play Tournaments & Win Real Wallet Money Daily</p>
+        <img src="assets/logo.jpg" alt="i Free Fire Logo" class="w-16 h-16 rounded-3xl object-cover ring-2 ring-amber-500 shadow-xl shadow-amber-500/20 mx-auto" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=200&q=80'">
+        <h1 class="text-2xl font-bold tracking-tight text-slate-100">Welcome to i Free Fire</h1>
+        <p class="text-xs text-slate-400">Play Free Fire Tournaments & Win Real Cash Money Daily</p>
     </div>
 
     <!-- Error Banner -->
@@ -137,7 +135,7 @@ require_once __DIR__ . '/common/header.php';
 
             <div class="mt-4 text-center">
                 <span class="text-xs text-slate-500">Demo Login:</span>
-                <span class="text-xs font-mono text-cyan-400 font-bold ml-1">player@adeptplay.com</span> /
+                <span class="text-xs font-mono text-cyan-400 font-bold ml-1">player@ifreefire.com</span> /
                 <span class="text-xs font-mono text-cyan-400 font-bold">player123</span>
             </div>
 

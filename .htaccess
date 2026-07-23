@@ -1,4 +1,4 @@
-# Adept Play Web Application - Security & Clean URLs
+# i Free Fire Web Application - Security & Clean URLs
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-f

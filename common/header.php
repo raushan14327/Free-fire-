@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/config.php';
 $currentUser = get_logged_in_user();
-$appName = get_setting('app_name', 'Adept Play');
+$appName = get_setting('app_name', 'i Free Fire');
 ?>
 <!DOCTYPE html>
 <html lang="en" class="dark">
@@ -113,12 +113,10 @@ $appName = get_setting('app_name', 'Adept Play');
 <div class="mobile-container pb-20">
     <!-- Top Header Bar -->
     <header class="sticky top-0 z-40 bg-brand-dark/90 backdrop-blur-md border-b border-slate-800/80 px-4 py-3 flex items-center justify-between">
-        <a href="index.php" class="flex items-center gap-2">
-            <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-amber-500 flex items-center justify-center shadow-lg shadow-cyan-500/20">
-                <i class="fa-solid fa-gamepad text-slate-950 text-lg"></i>
-            </div>
+        <a href="index.php" class="flex items-center gap-2.5">
+            <img src="assets/logo.jpg" alt="i Free Fire Logo" class="w-10 h-10 rounded-xl object-cover ring-2 ring-amber-500/50 shadow-lg shadow-amber-500/20" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=100&q=80'">
             <div>
-                <span class="font-display text-2xl tracking-wider font-bold bg-gradient-to-r from-cyan-400 via-indigo-300 to-amber-400 bg-clip-text text-transparent uppercase">
+                <span class="font-display text-2xl tracking-wider font-bold bg-gradient-to-r from-amber-400 via-orange-400 to-red-500 bg-clip-text text-transparent uppercase">
                     <?= htmlspecialchars($appName) ?>
                 </span>
             </div>

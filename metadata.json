@@ -1,6 +1,6 @@
 {
-  "name": "Adept Play",
-  "description": "Mobile-first Esports & Gaming Tournament Web App with Wallet, Registration, Admin Panel, and Dark Theme.",
+  "name": "i Free Fire",
+  "description": "Free Fire Esports & Gaming Tournament Web App with Wallet, Registration, Admin Panel, and Dark Theme.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

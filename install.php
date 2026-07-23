@@ -7,7 +7,7 @@ $status = '';
 if (isset($_POST['install_now'])) {
     try {
         auto_init_db($pdo);
-        $message = "Database & Tables successfully installed! Default admin account created (admin@adeptplay.com / admin123).";
+        $message = "Database & Tables successfully installed! Default admin account created (admin@ifreefire.com / admin123).";
         $status = "success";
     } catch (Exception $e) {
         $message = "Installation failed: " . $e->getMessage();
@@ -20,17 +20,15 @@ if (isset($_POST['install_now'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Database Setup - Adept Play</title>
+    <title>Database Setup - i Free Fire</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center p-4">
     <div class="max-w-md w-full bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl space-y-6">
         <div class="text-center space-y-2">
-            <div class="w-16 h-16 bg-cyan-500/10 border border-cyan-500/30 rounded-2xl flex items-center justify-center mx-auto text-cyan-400 text-2xl shadow-lg shadow-cyan-500/20">
-                <i class="fa-solid fa-database"></i>
-            </div>
-            <h1 class="text-2xl font-bold text-slate-100">Adept Play Database Setup</h1>
+            <img src="assets/logo.jpg" alt="i Free Fire Logo" class="w-16 h-16 rounded-2xl object-cover ring-2 ring-amber-500 shadow-lg shadow-amber-500/20 mx-auto" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=200&q=80'">
+            <h1 class="text-2xl font-bold text-slate-100">i Free Fire Database Setup</h1>
             <p class="text-xs text-slate-400">Initialize MySQL/SQLite database schema, sample tournaments, admin credentials, and default settings.</p>
         </div>
 
@@ -45,7 +43,7 @@ if (isset($_POST['install_now'])) {
             <div class="font-bold text-slate-200 border-b border-slate-800 pb-2">Default Setup Credentials:</div>
             <div class="flex justify-between">
                 <span class="text-slate-400">Admin Email:</span>
-                <span class="font-mono text-cyan-400">admin@adeptplay.com</span>
+                <span class="font-mono text-cyan-400">admin@ifreefire.com</span>
             </div>
             <div class="flex justify-between">
                 <span class="text-slate-400">Admin Password:</span>
@@ -53,7 +51,7 @@ if (isset($_POST['install_now'])) {
             </div>
             <div class="flex justify-between">
                 <span class="text-slate-400">Demo Player Email:</span>
-                <span class="font-mono text-amber-400">player@adeptplay.com</span>
+                <span class="font-mono text-amber-400">player@ifreefire.com</span>
             </div>
             <div class="flex justify-between">
                 <span class="text-slate-400">Demo Player Pass:</span>
