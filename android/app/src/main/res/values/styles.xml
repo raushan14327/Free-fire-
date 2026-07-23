@@ -1,5 +1,5 @@
 <resources>
-    <style name="Theme.AdeptPlay" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.IFreeFire" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:statusBarColor">@color/bg_dark</item>
         <item name="android:navigationBarColor">@color/bg_dark</item>
     </style>
