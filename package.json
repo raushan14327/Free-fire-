@@ -1,0 +1,11 @@
+{
+  "name": "adept-play",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "php -S 0.0.0.0:3000",
+    "start": "php -S 0.0.0.0:3000",
+    "build": "echo 'PHP App build ready'"
+  }
+}
