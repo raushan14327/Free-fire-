@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.adeptplay.app'
+    namespace 'com.ifreefire.app'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.adeptplay.app"
+        applicationId "com.ifreefire.app"
         minSdk 24
         targetSdk 34
         versionCode 1

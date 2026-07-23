@@ -1,4 +1,4 @@
-package com.adeptplay.app;
+package com.ifreefire.app;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
